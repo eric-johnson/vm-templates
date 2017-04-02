@@ -1,0 +1,47 @@
+{
+    "template": {
+        "name": "opnsense-17.1",
+        "author": "Eric Johnson <eric@eric-johnson.net>",
+        "description": "Like pfSense, but with OPNsense",
+        "created_at": {
+            "$date": "2017-04-01T22:30:00"
+        },
+        "updated_at": {
+            "$date": "2017-04-01T22:30:00"
+        },
+        "fetch": [
+            {
+                "name": "os",
+                "url": "http://mirrors.nycbug.org/pub/opnsense/releases/mirror/OPNsense-17.1-OpenSSL-vga-amd64.img.bz2",
+                "sha256": "de46b29fe8aa79bd9bab6d68c24b80759efd6ef59c235b296eb59adbe408d055",
+                "size": 253124223
+            }
+        ]
+    },
+    "config": {
+        "ncpus": 1,
+        "bootloader": "BHYVELOAD",
+        "memsize": 1024,
+        "minmemsize": 512,
+        "boot_device": "os"
+    },
+    "devices": [
+        {
+            "type": "DISK",
+            "name": "os",
+            "properties": {
+                "size": 1073741824,
+                "mode": "AHCI",
+                "source": "os"
+            }
+        },
+        {
+            "type": "NIC",
+            "name": "nic",
+            "properties": {
+                "mode": "NAT"
+            }
+        }
+    ],
+    "guest_type": "freebsd64"
+}
