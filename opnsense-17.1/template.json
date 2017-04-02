@@ -12,9 +12,9 @@
         "fetch": [
             {
                 "name": "os",
-                "url": "http://mirrors.nycbug.org/pub/opnsense/releases/mirror/OPNsense-17.1-OpenSSL-vga-amd64.img.bz2",
-                "sha256": "de46b29fe8aa79bd9bab6d68c24b80759efd6ef59c235b296eb59adbe408d055",
-                "size": 253124223
+                "url": "https://s3-us-west-2.amazonaws.com/net.eric-johnson.aws.test/OPNsense-17.1-OpenSSL-vga-amd64.img.gz",
+                "sha256": "9432fb2494b131f836a3c3794e4ccc356d08a6f648c69722f5b1685c7265826e",
+                "size": 287695522
             }
         ]
     },
